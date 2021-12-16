@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -7,42 +7,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Ingresso</title>
 </head>
 
 <body>
     <div id="container">
         <header>
-            <div class="header">
-                <h1>Ingressos - Menu</h1>
-                <nav class="nav-header">
-                    <ul>
-                        <li>
-                            <a href="#"> <i class="fas fa-search"> Busca</i></a>
-                           <!--  <ul>
-                                <li>
-                                    <textarea name="source" class="menu-source"></textarea>
-                                </li>
-                            </ul> -->
-                        </li>
-                        <li>
-                            <a href="#">Olá, Visitante</a>
-                            <!-- <ul>
-                                <li>
-                                    <textarea name="source" class="menu-source"></textarea>
-                                </li>
-                            </ul> -->
-                        </li>
-                    </ul>
-                </nav>
+            <div class="logo">
+                <img src="./images/ticket-image.png" alt="">
+                <h1>Ingressos</h1>
             </div>
+            <nav>
+                <div class="search">
+                    <i class="fas fa-search"><input type="text" placeholder="Pesquisar eventos, shows, teatros..."></i>
+                </div>
+                <div class="visitor">
+                    <a href="">
+                        <i class="fas fa-user"><span>Olá, visitante!</span></i>
+                    </a>                    
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="">HOME |</a></li>
+                        <li><a href="">NOTÍCIAS |</a></li>
+                        <li><a href="">CINEMA |</a></li>
+                        <li><a href="">TEATRO</a></li>
+                    </ul>
+                </div>
+            </nav>
         </header>
 
         <main>
-            <h2>Filmes em cartaz - Main</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam enim earum ratione, odit harum
-                aliquam praesentium quisquam temporibus vero ipsam, veniam, exercitationem est voluptas nostrum expedita
-                quasi. Explicabo, esse veniam!</p>
+            <section id="movies">
+                <h2>Filmes em alta</h2>
+                <div class="movie"></div>
+                <div class="movie"></div>
+                <div class="movie"></div>
+            </section>
+            <section id="concerts">
+                <h2>Shows em alta</h2>
+                <div class="concert"></div>
+                <div class="concert"></div>
+                <div class="concert"></div>
+            </section>
+            <section id="theaters">
+                <h2>Peças em alta</h2>
+                <div class="theater"></div>
+                <div class="theater"></div>
+                <div class="theater"></div>
+            </section>
         </main>
 
         <footer>
