@@ -15,49 +15,50 @@ body {
     background-color: whitesmoke;
 }
 
-/* MAIN */
 div#container{
-    /* margin: 0 auto; */
-
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 /* HEADER */
 header {
-    /* border: 1px solid red; */
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.94;
+    width: 100vw;
+    z-index: 2;
+    box-shadow: 0px 6px 22px -16px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0px 6px 22px -16px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 6px 22px -16px rgba(0,0,0,0.4);
+}
+
+#container > header {
     padding: 2em 1em;
     width: 100%;
     background-color: white;
 }
 
-header .logo {
-    /* border: 1px solid green; */
+.logo {
     text-align: center;
 }
-
-header .logo img {
+.logo img {
     width: 48px;
     height: 48px;
 }
 
-header .logo h1 {
+.logo h1 {
     display: inline-block;
     vertical-align: top;
     font-size: 3em;
     color: #0797fa;
-    vertical-align: bottom;
 }
 
 header nav {
-    /* border: 1px solid blue; */
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-evenly;
     align-items: center;
-}
-
-header nav .search {
-    /* height: 100%; */
 }
 
 header nav .search, .visitor {
@@ -67,7 +68,7 @@ header nav .search i {
     font-size: 1.2em;
     color: #0797fa;
     background-color: white;
-    padding-left: 0.8em;
+    padding-top: 0.2em;
     vertical-align: middle;
     height: 48px;
     border-radius: 8px;
@@ -86,10 +87,6 @@ header nav .search input {
     font-size: 1em;
 }
 
-header nav .visitor {
-    /* border: 1px solid black; */
-}
-
 header nav .visitor i {
     vertical-align: middle;
     color: #0797fa;
@@ -106,24 +103,78 @@ header nav .visitor i span {
 }
 
 header nav .menu {
-    margin-top: 2em;
+    margin-top: 4em;
+    grid-column-start: 1;
+    grid-column-end: 4;
 }
 
 header nav .menu ul {
     display: flex;
     justify-content: center;
-    padding-left: 1em 0;
 }
 
 header nav .menu ul li {
     display: flex;
     justify-content: center;
-    padding-left: 1em 0;
+    padding: 0 2em;
 }
 
-/* END HEADER */
+header nav .menu ul li a {
+    color: rgb(36, 36, 36);
+}
 
-/* END MAIN */
+/* MAIN */
+
+main {
+    padding-top: 200px;
+}
+
+main > section > h2 {
+    font-size: 1.8em;
+    font-weight: 300;
+}   
+
+#movies, 
+#concerts, 
+#theaters {
+    width: 100%;
+    /* border: 1px solid red; */
+    padding: 1em;
+    margin: 1.6em 0;
+}
+
+#movies > h2,
+#concerts > h2,
+#theaters > h2 {
+    line-height: 2em;
+}
+
+#movies > div,
+#concerts > div, 
+#theaters > div {
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+    /* padding: 1em; */
+}
+
+#movies > div > div,
+#concerts > div > div,
+#theaters > div > div {
+    max-width: 28%;
+    overflow: hidden;
+}
+
+.movie, .concert, .theater {
+    /* border: 1px solid blue; */
+    max-width: 100%;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.movie:hover, .concert:hover, .theater:hover {
+    transform: scale(1.2);
+}
 
 /* FOOTER */
 .footer{
