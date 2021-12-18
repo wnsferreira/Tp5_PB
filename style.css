@@ -176,6 +176,60 @@ main > section > h2 {
     transform: scale(1.2);
 }
 
+
+/* Teste */
+main{
+    display: grid;
+    place-items: center;
+}
+
+#movie1 > h2,
+#concerts1 > h2,
+#theaters1 > h2 {
+    line-height: 2em;
+}
+
+#movies1, #concerts1, #theaters1 {
+    max-width: 100%;
+    padding: 20px;
+}
+
+#items-wrapper{
+    width: 80vw;
+}
+
+#items{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: auto;
+}
+.item{
+    flex: none;
+
+    width: 34%;  /* Quantidade de imagens na tela */
+    height: 300px;
+
+    scroll-snap-align: start;
+   /*  margin: 10px; */
+    padding: 30px;
+}
+
+.item:hover{
+    /* transform: scale(1.1); */
+    /* border: 1px solid white; */
+    transition: all 1s;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;  /* Ajusta a imagem */
+}
+
+
+
 /* FOOTER */
 .footer{
     background: #303036;
